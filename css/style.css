@@ -50,8 +50,9 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .btn-primary-custom:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-outline-custom {
@@ -593,16 +594,39 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 /* --- Skip to Main Content (A11y) --- */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px; /* Changed from -40px to ensure it's completely hidden */
     left: 0;
     background: #1B4D3E;
     color: #FDFBF7;
-    padding: 8px 16px;
+    padding: 10px 20px;
     z-index: 9999;
     text-decoration: none;
     font-weight: bold;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.3s ease-in-out;
 }
 .skip-link:focus {
     top: 0;
+}
+
+/* Button transitions */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* #1B4D3E */
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #143A2E;
 }
