@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   margin-bottom: 0;
 }
 
-.slivroot-logo {
+.silvroot-logo {
   color: var(--primary-color);
   position: relative;
   display: inline-flex;
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   justify-content: center;
 }
 
-.slivroot-leaf-icon {
+.silvroot-leaf-icon {
   width: 30px !important;
   height: 30px !important;
   margin-left: 2px;
@@ -588,4 +588,21 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 .offcanvas-nav-list li:last-child {
     border-bottom: none;
+}
+
+/* --- Skip to Main Content (A11y) --- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #1B4D3E;
+    color: #FDFBF7;
+    padding: 8px 16px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+    transition: top 0.2s ease-in-out;
+}
+.skip-link:focus {
+    top: 0;
 }
