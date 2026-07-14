@@ -23,10 +23,10 @@
             <div class="d-flex justify-content-between align-items-center w-100 m-0 px-2 px-lg-0">
                 <!-- Left: Hamburger (Mobile) & Desktop spacing placeholder -->
                 <div class="d-flex align-items-center" style="width: 33.33%;">
-                    <button class="navbar-toggler hamburger-toggle border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
+                    <button class="custom-toggler d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle mobile menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
                     </button>
                 </div>
                 
@@ -51,14 +51,32 @@
             </div>
 
             <!-- Bottom Row: Links -->
-            <div class="collapse navbar-collapse mt-3 w-100" id="navbarNav">
+            
+                        <!-- Desktop Links -->
+            <div class="collapse navbar-collapse mt-3 w-100 d-none d-lg-block" id="navbarNav">
                 <ul class="navbar-nav mx-auto gap-4 justify-content-center">
                     <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary-custom" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
                     <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
                 </ul>
+            </div>
+            <!-- Mobile Menu Offcanvas -->
+            <div class="offcanvas offcanvas-start bg-beige-custom d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header border-bottom border-light">
+                    <h5 class="offcanvas-title" id="mobileMenuLabel" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1B4D3E;">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-center">
+                    <ul class="offcanvas-nav-list text-center w-100">
+                        <li><a class="mobile-offcanvas-link" href="index.html">Home</a></li>
+                        <li><a class="mobile-offcanvas-link" href="shop.html">Shop</a></li>
+                        <li><a class="mobile-offcanvas-link" href="about.html">About</a></li>
+                        <li><a class="mobile-offcanvas-link" href="blog.html">Blog</a></li>
+                        <li><a class="mobile-offcanvas-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
