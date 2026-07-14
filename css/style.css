@@ -612,21 +612,222 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .btn {
     transition: all 0.3s ease-in-out;
 }
+.animate-pop {
+  animation: pop 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-overlay {
+    background: rgba(253,251,247,0.85); /* More opaque on mobile for readability */
+  }
+  .hero-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+/* Animations & Transitions */
+.card-custom, .card-category {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card-custom:hover, .card-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+.link-animated-underline {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.link-animated-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.link-animated-underline:hover::after {
+    width: 100%;
+}
+
+.carousel-item {
+    transition: transform 0.8s ease-in-out !important;
+}
+
+/* Bootstrap Overrides */
+.form-control:focus, .btn:focus, .accordion-button:focus, .page-link:focus, .form-check-input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: var(--primary-color) !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+/* Phase 3 CSS */
+.accordion-collapse {
+    transition: all 0.3s ease-in-out;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+.accordion-button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.custom-select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+.custom-select-wrapper::after {
+    content: '\f107'; /* FontAwesome down arrow */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary-color);
+}
+
+/* --- Dropdown Custom Styles (Override Blue) --- */
+.dropdown-menu .dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+    background-color: #FAF9F6 !important;
+    color: #1B4D3E !important;
+    font-weight: 500;
+}
+
+/* --- Global Focus States (A11y) --- */
+:focus-visible {
+    outline: 2px solid #1B4D3E !important;
+    outline-offset: 2px !important;
+}
+
+/* --- Strict Animated Hamburger Menu --- */
+.custom-toggler {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.custom-toggler .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #1B4D3E;
+    transition: all 0.3s ease-in-out;
+}
+.custom-toggler.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.custom-toggler.active .bar:nth-child(2) { opacity: 0; }
+.custom-toggler.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* --- Mobile Menu Offcanvas Styling --- */
+.bg-beige-custom {
+    background-color: #FDFBF7 !important;
+}
+.mobile-offcanvas-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #333333;
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.mobile-offcanvas-link:hover, .mobile-offcanvas-link:focus {
+    color: #1B4D3E;
+}
+.offcanvas-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.offcanvas-nav-list li {
+    border-bottom: 1px solid #E2E0D8;
+}
+.offcanvas-nav-list li:last-child {
+    border-bottom: none;
+}
+
+/* --- Skip to Main Content (A11y) --- */
+.skip-link {
+    position: absolute;
+    top: -100px; /* Changed from -40px to ensure it's completely hidden */
+    left: 0;
+    background: #1B4D3E;
+    color: #FDFBF7;
+    padding: 10px 20px;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: bold;
+    transition: top 0.3s ease-in-out;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Button transitions */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
 .btn:hover {
     transform: translateY(-2px);
 }
 
-/* --- Custom Scrollbar --- */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-color);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color); /* #1B4D3E */
-    border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #143A2E;
+/* --- Custom Scrollbar (Desktop Only) --- */
+@media (min-width: 992px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color); /* #1B4D3E */
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #143A2E;
+    }
+
+    html, body {
+        scrollbar-color: var(--primary-color) var(--bg-color);
+    }
 }
