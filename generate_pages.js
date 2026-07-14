@@ -19,14 +19,17 @@ const template = `<!DOCTYPE html>
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar -->
+    <header>
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
         <div class="container d-flex flex-column position-relative">
             <!-- Top Row: Logo & Icons -->
             <div class="d-flex justify-content-between align-items-center w-100 m-0 px-2 px-lg-0">
                 <!-- Left: Hamburger (Mobile) & Desktop spacing placeholder -->
                 <div class="d-flex align-items-center" style="width: 33.33%;">
-                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler hamburger-toggle border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
                     </button>
                 </div>
                 
@@ -62,6 +65,7 @@ const template = `<!DOCTYPE html>
             </div>
         </div>
     </nav>
+    </header>
 
     <!-- Main Content -->
     <main class="flex-shrink-0 mb-5">
@@ -116,7 +120,7 @@ const template = `<!DOCTYPE html>
                     </div>
                 </div>
             </div>
-            <p class="small text-muted">&copy; 2026 Slivroot. All rights reserved.</p>
+            <p class="small text-muted">&copy; <span id="current-year"></span> Slivroot. All rights reserved.</p>
         </div>
     </footer>
 
