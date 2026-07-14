@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - Slivroot</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Shop natural, organic, and Ayurvedic beauty and skincare products at Slivroot.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+        <div class="container d-flex flex-column position-relative">
+            <!-- Top Row: Logo & Icons -->
+            <div class="d-flex justify-content-between align-items-center w-100 m-0 px-2 px-lg-0">
+                <!-- Left: Hamburger (Mobile) & Desktop spacing placeholder -->
+                <div class="d-flex align-items-center" style="width: 33.33%;">
+                    <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                
+                <!-- Center: Logo -->
+                <div class="d-flex justify-content-center text-center" style="width: 33.33%;">
+                    <a class="navbar-brand-centered text-decoration-none slivroot-logo m-0 d-inline-flex justify-content-center align-items-center" href="index.html">
+                        Slivroot
+                        <svg class="slivroot-leaf-icon ms-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+                            <path d="M17.5 5.5C15 5.5 12.5 6.5 10.5 8.5C8.5 10.5 7.5 13 7.5 15.5C7.5 16.5 8 17.5 9 17.5C10 17.5 11 17 11 16C11 14.5 11.5 13 12.5 12C13.5 11 15 10.5 16.5 10.5C17.5 10.5 18 10 18 9C18 7.5 17.5 6.5 17.5 5.5Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right: Icons -->
+                <div class="d-flex justify-content-end align-items-center gap-3" style="width: 33.33%;">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user fs-5"></i></a>
+                    <a href="cart.html" class="text-dark position-relative">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span id="cart-counter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Links -->
+            <div class="collapse navbar-collapse mt-3 w-100" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-4 justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary-custom" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0 mb-5">
+        <div class="container mt-5">
+
+            <h1 class="display-4 fw-bold mb-5 text-center">The Slivroot Journal</h1>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0">
+                        <img src="assets/product1.png" class="card-img-top" alt="Blog 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayurveda 101: Discover Your Dosha</h5>
+                            <p class="card-text text-muted">Learn about Vata, Pitta, and Kapha and how to care for your unique skin type using time-tested herbal remedies and lifestyle adjustments.</p>
+                            <a href="blog-detail.html" class="link-animated-underline explore-link text-primary-custom fw-bold">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0">
+                        <img src="assets/product2.png" class="card-img-top" alt="Blog 2">
+                        <div class="card-body">
+                            <h5 class="card-title">The Magic of Turmeric</h5>
+                            <p class="card-text text-muted">Why this golden spice is a staple in Ayurvedic skincare rituals.</p>
+                            <a href="blog-detail.html" class="link-animated-underline explore-link text-primary-custom fw-bold">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-custom h-100 border-0">
+                        <img src="assets/product3.png" class="card-img-top" alt="Blog 3">
+                        <div class="card-body">
+                            <h5 class="card-title">A Nighttime Ritual for Glowing Skin</h5>
+                            <p class="card-text text-muted">Step-by-step guide to winding down and nourishing your skin overnight.</p>
+                            <a href="blog-detail.html" class="link-animated-underline explore-link text-primary-custom fw-bold">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto bg-white border-top border-light">
+        <div class="container text-center pt-3">
+            <div class="row trust-badges justify-content-center mb-5 pb-4 border-bottom border-light">
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <i class="fa-solid fa-paw"></i>
+                    <p class="small fw-bold text-uppercase mb-0 mt-2">Cruelty-Free</p>
+                </div>
+                <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <i class="fa-solid fa-ban"></i>
+                    <p class="small fw-bold text-uppercase mb-0 mt-2">Paraben Free</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <i class="fa-solid fa-leaf"></i>
+                    <p class="small fw-bold text-uppercase mb-0 mt-2">100% Vegan</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <i class="fa-solid fa-flask"></i>
+                    <p class="small fw-bold text-uppercase mb-0 mt-2">Lab Tested</p>
+                </div>
+            </div>
+            
+            <div class="row mb-4 text-start">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Slivroot</h5>
+                    <p class="text-muted small">Elevating skincare through the ancient wisdom of Ayurveda.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-uppercase mb-3">Quick Links</h6>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="shop.html" class="text-muted text-decoration-none">Shop</a>
+                        <a href="about.html" class="text-muted text-decoration-none">About Us</a>
+                        <a href="blog.html" class="text-muted text-decoration-none">Journal</a>
+                        <a href="contact.html" class="text-muted text-decoration-none">Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="text-uppercase mb-3">Support</h6>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="shipping.html" class="text-muted text-decoration-none">Shipping Policy</a>
+                        <a href="refund-policy.html" class="text-muted text-decoration-none">Refund Policy</a>
+                        <a href="privacy-policy.html" class="text-muted text-decoration-none">Privacy Policy</a>
+                        <a href="terms.html" class="text-muted text-decoration-none">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <p class="small text-muted">&copy; 2026 Slivroot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
