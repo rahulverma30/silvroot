@@ -94,10 +94,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .slivroot-leaf-icon {
-  width: 24px;
-  height: 24px;
+  width: 30px !important;
+  height: 30px !important;
   margin-left: 2px;
-  margin-top: 5px;
+  margin-top: -30px;
   color: var(--primary-color);
 }
 
@@ -448,6 +448,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     position: relative;
     text-decoration: none;
     display: inline-block;
+    width: fit-content;
 }
 
 .link-animated-underline::after {
