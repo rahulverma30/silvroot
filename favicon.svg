@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1B4D3E">
-    <path d="M17.5 5.5C15 5.5 12.5 6.5 10.5 8.5C8.5 10.5 7.5 13 7.5 15.5C7.5 16.5 8 17.5 9 17.5C10 17.5 11 17 11 16C11 14.5 11.5 13 12.5 12C13.5 11 15 10.5 16.5 10.5C17.5 10.5 18 10 18 9C18 7.5 17.5 6.5 17.5 5.5Z" />
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Forest Green Background (optional, but requested matching Forest Green and Gold) -->
+    <rect width="64" height="64" rx="16" fill="#1B4D3E"/>
+    
+    <!-- Gold Serif 'S' -->
+    <text x="32" y="44" font-family="'Playfair Display', serif" font-size="32" font-weight="700" fill="#D4AF37" text-anchor="middle">S</text>
+
+    <!-- Delicate Gold Leaf Accent overlapping the top right of the S -->
+    <svg x="32" y="12" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+        <path d="M2 22l9-9"/>
+    </svg>
 </svg>

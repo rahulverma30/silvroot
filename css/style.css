@@ -87,19 +87,21 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .silvroot-logo {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
+  font-family: var(--font-heading) !important;
+  letter-spacing: 1.5px !important;
   position: relative;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
 .silvroot-leaf-icon {
-  width: 30px !important;
-  height: 30px !important;
-  margin-left: 2px;
-  margin-top: -30px;
-  color: var(--primary-color);
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 24px !important;
+  height: 24px !important;
 }
 
 .nav-link {
@@ -351,6 +353,12 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
+}
+
+.sidebar-filter .heading {
+  margin-bottom: unset;
+  border-bottom: unset;
+  font-size: 24px;
 }
 
 .sidebar-filter .form-check-label {
@@ -829,5 +837,79 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
     html, body {
         scrollbar-color: var(--primary-color) var(--bg-color);
+    }
+}
+
+/* --- Account Page Redesign --- */
+.account-sidebar {
+    border-right: 1px solid var(--border-color);
+}
+
+.account-tab-link {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+    white-space: nowrap;
+    text-transform: none;
+    display: block;
+    width: 100%;
+}
+
+.account-tab-link:hover, .account-tab-link:focus {
+    color: var(--primary-color);
+    background-color: rgba(27, 77, 62, 0.03);
+    outline: none;
+}
+
+.account-tab-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-left-color: var(--primary-color);
+    background-color: rgba(27, 77, 62, 0.05);
+}
+
+.account-tab-link.text-danger {
+    color: #d9534f !important;
+}
+
+.account-tab-link.text-danger:hover {
+    background-color: rgba(217, 83, 79, 0.05);
+    border-left-color: #d9534f;
+}
+
+.border-custom {
+    border: 1px solid var(--border-color) !important;
+}
+
+@media (max-width: 767px) {
+    .account-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0;
+    }
+    
+    .account-tab-link {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 12px 15px;
+        text-align: center;
+        width: auto;
+    }
+    
+    .account-tab-link.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--primary-color);
+    }
+    
+    .account-tab-link.text-danger:hover {
+        border-left-color: transparent;
+        border-bottom-color: #d9534f;
     }
 }

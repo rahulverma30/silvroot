@@ -41,10 +41,11 @@
                 
                 <!-- Center: Logo -->
                 <div class="d-flex justify-content-center text-center" style="width: 33.33%;">
-                    <a class="navbar-brand-centered text-decoration-none silvroot-logo m-0 d-inline-flex justify-content-center align-items-center" href="index.html">
+                    <a class="navbar-brand-centered text-decoration-none silvroot-logo m-0" href="index.html">
                         Silvroot
-                        <svg class="silvroot-leaf-icon ms-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
-                            <path d="M17.5 5.5C15 5.5 12.5 6.5 10.5 8.5C8.5 10.5 7.5 13 7.5 15.5C7.5 16.5 8 17.5 9 17.5C10 17.5 11 17 11 16C11 14.5 11.5 13 12.5 12C13.5 11 15 10.5 16.5 10.5C17.5 10.5 18 10 18 9C18 7.5 17.5 6.5 17.5 5.5Z" fill="currentColor"/>
+                        <svg class="silvroot-leaf-icon" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                            <path d="M2 22l9-9"/>
                         </svg>
                     </a>
                 </div>
@@ -99,82 +100,84 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <!-- Nav tabs -->
-                    <div class="nav nav-pills flex-row flex-md-column flex-nowrap overflow-x-auto gap-2 pb-3 pb-md-0 account-tabs-mobile" id="v-pills-tab" role="tablist">
-                        <button class="nav-link active text-nowrap py-2 px-4 rounded-pill fw-bold" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">
-                            Profile Details
+                    <div class="nav flex-row flex-md-column flex-nowrap overflow-x-auto account-sidebar" id="v-pills-tab" role="tablist">
+                        <button class="account-tab-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">
+                            <i class="fa-regular fa-user me-2 d-none d-md-inline-block"></i>Profile Details
                         </button>
-                        <button class="nav-link text-nowrap py-2 px-4 rounded-pill fw-bold" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="false">
-                            Order History
+                        <button class="account-tab-link" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="false">
+                            <i class="fa-solid fa-box-open me-2 d-none d-md-inline-block"></i>Order History
                         </button>
-                        <a href="index.html" class="nav-link text-nowrap py-2 px-4 rounded-pill fw-bold text-danger border border-danger bg-white">Logout</a>
+                        <a href="index.html" class="account-tab-link text-danger text-decoration-none">
+                            <i class="fa-solid fa-arrow-right-from-bracket me-2 d-none d-md-inline-block"></i>Logout
+                        </a>
                     </div>
                 </div>
                 
-                <div class="col-md-9">
+                <div class="col-md-8 offset-md-1">
                     <!-- Tab panes -->
-                    <div class="tab-content bg-white p-4 border border-light" id="v-pills-tabContent">
+                    <div class="tab-content bg-white p-4 p-md-5 border-custom shadow-sm" id="v-pills-tabContent">
                         
                         <!-- Profile Tab -->
                         <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                            <h4 class="mb-4">Profile Details</h4>
+                            <h4 class="mb-5 border-bottom pb-3" style="font-family: var(--font-heading);">Profile Details</h4>
                             <form id="profile-form">
                                 <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName" class="form-label small">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" value="Jane">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="firstName" class="form-label small text-uppercase text-muted fw-bold" style="letter-spacing: 1px;">First Name</label>
+                                        <input type="text" class="form-control p-3" id="firstName" value="Jane">
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName" class="form-label small">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" value="Doe">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="lastName" class="form-label small text-uppercase text-muted fw-bold" style="letter-spacing: 1px;">Last Name</label>
+                                        <input type="text" class="form-control p-3" id="lastName" value="Doe">
                                     </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label small">Email Address</label>
-                                    <input type="email" class="form-control" id="email" value="jane.doe@example.com">
                                 </div>
                                 <div class="mb-4">
-                                    <label for="phone" class="form-label small">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                                    <label for="email" class="form-label small text-uppercase text-muted fw-bold" style="letter-spacing: 1px;">Email Address</label>
+                                    <input type="email" class="form-control p-3" id="email" value="jane.doe@example.com">
                                 </div>
-                                <button type="submit" class="btn btn-primary-custom">Save Changes</button>
+                                <div class="mb-5">
+                                    <label for="phone" class="form-label small text-uppercase text-muted fw-bold" style="letter-spacing: 1px;">Phone Number</label>
+                                    <input type="tel" class="form-control p-3" id="phone" value="+1 (555) 123-4567">
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom w-100 py-3">Save Changes</button>
                             </form>
                         </div>
                         
                         <!-- Orders Tab -->
                         <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
-                            <h4 class="mb-4">Order History</h4>
+                            <h4 class="mb-5 border-bottom pb-3" style="font-family: var(--font-heading);">Order History</h4>
                             <div class="table-responsive">
-                                <table class="table table-cart">
+                                <table class="table table-cart align-middle text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Order ID</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col" class="py-3 px-3">Order ID</th>
+                                            <th scope="col" class="py-3 px-3">Date</th>
+                                            <th scope="col" class="py-3 px-3">Status</th>
+                                            <th scope="col" class="py-3 px-3">Total</th>
+                                            <th scope="col" class="py-3 px-3 text-end">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>#HB-10294</td>
-                                            <td>Oct 12, 2026</td>
-                                            <td><span class="badge bg-success badge-custom">Delivered</span></td>
-                                            <td>₹48.00</td>
-                                            <td><a href="javascript:void(0)" class="text-dark view-order-details">View Details</a></td>
+                                            <td class="px-3 fw-bold text-primary-custom">#HB-10294</td>
+                                            <td class="px-3 text-muted">Oct 12, 2026</td>
+                                            <td class="px-3"><span class="badge" style="background-color: rgba(27, 77, 62, 0.1); color: var(--primary-color); border: 1px solid var(--primary-color);">Delivered</span></td>
+                                            <td class="px-3 fw-bold">₹48.00</td>
+                                            <td class="px-3 text-end"><a href="javascript:void(0)" class="btn btn-sm btn-outline-custom rounded-0 px-3 view-order-details">View</a></td>
                                         </tr>
                                         <tr>
-                                            <td>#HB-10182</td>
-                                            <td>Sep 28, 2026</td>
-                                            <td><span class="badge bg-success badge-custom">Delivered</span></td>
-                                            <td>₹115.00</td>
-                                            <td><a href="javascript:void(0)" class="text-dark view-order-details">View Details</a></td>
+                                            <td class="px-3 fw-bold text-primary-custom">#HB-10182</td>
+                                            <td class="px-3 text-muted">Sep 28, 2026</td>
+                                            <td class="px-3"><span class="badge" style="background-color: rgba(27, 77, 62, 0.1); color: var(--primary-color); border: 1px solid var(--primary-color);">Delivered</span></td>
+                                            <td class="px-3 fw-bold">₹115.00</td>
+                                            <td class="px-3 text-end"><a href="javascript:void(0)" class="btn btn-sm btn-outline-custom rounded-0 px-3 view-order-details">View</a></td>
                                         </tr>
                                         <tr>
-                                            <td>#HB-09945</td>
-                                            <td>Aug 15, 2026</td>
-                                            <td><span class="badge bg-success badge-custom">Delivered</span></td>
-                                            <td>₹32.00</td>
-                                            <td><a href="javascript:void(0)" class="text-dark view-order-details">View Details</a></td>
+                                            <td class="px-3 fw-bold text-primary-custom">#HB-09945</td>
+                                            <td class="px-3 text-muted">Aug 15, 2026</td>
+                                            <td class="px-3"><span class="badge" style="background-color: rgba(27, 77, 62, 0.1); color: var(--primary-color); border: 1px solid var(--primary-color);">Delivered</span></td>
+                                            <td class="px-3 fw-bold">₹32.00</td>
+                                            <td class="px-3 text-end"><a href="javascript:void(0)" class="btn btn-sm btn-outline-custom rounded-0 px-3 view-order-details">View</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -211,7 +214,13 @@
             
             <div class="row mb-4 text-start">
                 <div class="col-md-4 mb-4">
-                    <h5 class="mb-3">Silvroot</h5>
+                    <a class="text-decoration-none silvroot-logo mb-3 d-inline-flex" href="index.html" style="font-size: 1.75rem;">
+                        Silvroot
+                        <svg class="silvroot-leaf-icon" style="width: 18px !important; height: 18px !important; right: -15px; top: 0;" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                            <path d="M2 22l9-9"/>
+                        </svg>
+                    </a>
                     <p class="text-muted small">Elevating skincare through the ancient wisdom of Ayurveda.</p>
                 </div>
                                 <div class="col-md-4 mb-4">
