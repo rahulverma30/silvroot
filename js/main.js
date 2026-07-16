@@ -161,11 +161,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const updateQtyButtons = (input) => {
+        const minusBtn = input.previousElementSibling;
+        const val = parseInt(input.value) || 0;
+        if (val <= 1) {
+            minusBtn.setAttribute('disabled', 'disabled');
+        } else {
+            minusBtn.removeAttribute('disabled');
+        }
+    };
+
+    // Initialize buttons
+    document.querySelectorAll('.qty-input').forEach(input => {
+        updateQtyButtons(input);
+        
+        input.addEventListener('change', function() {
+            let val = parseInt(this.value) || 1;
+            if (val < 1) val = 1;
+            this.value = val;
+            updateQtyButtons(this);
+            // Optionally update line price here if manual entry is supported
+        });
+    });
+
     document.querySelectorAll('.qty-plus').forEach(btn => {
         btn.addEventListener('click', function() {
             const input = this.previousElementSibling;
             let val = parseInt(input.value) || 0;
             input.value = val + 1;
+            updateQtyButtons(input);
             
             // Update line price based on original unit price
             const tr = this.closest('tr');
@@ -188,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let val = parseInt(input.value) || 0;
             if (val > 1) {
                 input.value = val - 1;
+                updateQtyButtons(input);
                 
                 // Update line price
                 const tr = this.closest('tr');
