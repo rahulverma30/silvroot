@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Set current year in footer
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
     
     // --- 1. Global Modals Injection ---
     const injectModals = () => {
@@ -261,6 +266,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update active state
                 sortOptions.forEach(opt => opt.classList.remove('active'));
                 this.classList.add('active');
+            });
+        });
+    }
+
+    // --- Magic Line for Desktop Navbar ---
+    const navBar = document.querySelector('.navbar-nav');
+    const activeLink = document.querySelector('.nav-link.active');
+    
+    if (navBar && window.innerWidth >= 992) {
+        const magicLine = document.createElement('div');
+        magicLine.className = 'magic-line';
+        
+        // 1. Synchronously set the initial position BEFORE appending to DOM
+        // This prevents the line from popping in late or flashing.
+        const prevLeft = sessionStorage.getItem('magicLineFromLeft');
+        if (prevLeft !== null) {
+            magicLine.style.transition = 'none';
+            magicLine.style.width = '20px';
+            magicLine.style.transform = `translateX(${prevLeft}px)`;
+        } else {
+            magicLine.style.transition = 'none';
+            magicLine.style.width = '0px';
+        }
+        navBar.appendChild(magicLine);
+
+        // 2. Wait for fonts to load to ensure destination calculation is perfect
+        document.fonts.ready.then(() => {
+            const updateLine = (element, animate = true) => {
+                if (!element) return;
+                const parentRect = navBar.getBoundingClientRect();
+                const linkRect = element.getBoundingClientRect();
+                const left = linkRect.left - parentRect.left;
+                const width = 20;
+                const centerOffset = left + (linkRect.width / 2) - (width / 2);
+                
+                if (!animate) {
+                    magicLine.style.transition = 'none';
+                } else {
+                    magicLine.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)';
+                }
+                
+                magicLine.style.width = `${width}px`;
+                magicLine.style.transform = `translateX(${centerOffset}px)`;
+                
+                if (!animate) {
+                    void magicLine.offsetWidth; // Force layout
+                }
+            };
+
+            if (prevLeft !== null && activeLink) {
+                // We are already at the previous location. Now we just enable transition and slide!
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        updateLine(activeLink, true);
+                    });
+                });
+                sessionStorage.removeItem('magicLineFromLeft');
+            } else if (activeLink) {
+                updateLine(activeLink, false);
+            }
+
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    const parentRect = navBar.getBoundingClientRect();
+                    const lineRect = magicLine.getBoundingClientRect();
+                    const left = lineRect.left - parentRect.left;
+                    // Store current line position before navigating away
+                    sessionStorage.setItem('magicLineFromLeft', left);
+                    
+                    // CRITICAL: Do NOT animate here! Animating right before a page unload 
+                    // causes the animation to start, freeze, and then restart on the new page, 
+                    // which creates a severe "jerking" visual glitch. 
+                });
             });
         });
     }

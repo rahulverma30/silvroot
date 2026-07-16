@@ -122,6 +122,33 @@ h6,
   color: var(--primary-color) !important;
 }
 
+@media (min-width: 992px) {
+  .navbar-nav {
+    position: relative;
+  }
+  
+  .navbar-nav .nav-link {
+    position: relative;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+  }
+  
+  .magic-line {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    background-color: #D4AF37;
+    border-radius: 2px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 10;
+    pointer-events: none;
+    left: 0;
+  }
+}
+
 .nav-icons-container {
   position: absolute;
   right: 15px;
@@ -1036,12 +1063,12 @@ h6,
 }
 
 /* Hide spin buttons for quantity inputs */
-right: 1rem;
+/* right: 1rem;
 top: 50%;
 transform: translateY(-50%);
 pointer-events: none;
 color: var(--primary-color);
-}
+} */
 
 /* --- Dropdown Custom Styles (Override Blue) --- */
 .dropdown-menu .dropdown-item {
