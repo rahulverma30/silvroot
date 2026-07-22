@@ -157,9 +157,6 @@ h6,
     left: 0;
   }
 
-  .silvroot-logo-img {
-    margin-left: unset;
-  }
 }
 
 .nav-icons-container {
@@ -177,6 +174,10 @@ h6,
     transform: none;
     margin-top: 15px;
     justify-content: center;
+  }
+
+  .silvroot-logo-img {
+    margin-left: unset;
   }
 }
 
@@ -1344,4 +1345,43 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+}
+
+/* --- CRO Layout Updates --- */
+.hero-section {
+  height: 60vh !important;
+  max-height: 500px !important;
+  min-height: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero-title {
+  margin-bottom: 0.5rem !important;
+}
+
+.hero-content .lead {
+  margin-bottom: 1rem !important;
+}
+
+/* Pull-Up Overlap Trick */
+.hero-section+section {
+  margin-top: -60px !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 45vh !important;
+    max-height: 350px !important;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-section+section {
+    margin-top: -40px !important;
+  }
 }
