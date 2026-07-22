@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded'₹ () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     let count = 0;
 
     addToCartBtns.forEach(btn => {
-        btn.addEventListener('click'₹ function(e) {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
             count++;
             if(cartCounter) {
                 cartCounter.textContent = count;
                 cartCounter.classList.add('animate-pop');
-                setTimeout(() => cartCounter.classList.remove('animate-pop')₹ 300);
+                setTimeout(() => cartCounter.classList.remove('animate-pop'), 300);
             }
             const modal = new bootstrap.Modal(document.getElementById('addToCartModal'));
             modal.show();
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     const logoutLinks = document.querySelectorAll('a.nav-link.text-danger');
     logoutLinks.forEach(link => {
         if (link.textContent.trim().toLowerCase() === 'logout') {
-            link.addEventListener('click'₹ function(e) {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const modal = new bootstrap.Modal(document.getElementById('logoutModal'));
                 modal.show();
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     // --- 4. Order Details Interception ---
     const viewOrderLinks = document.querySelectorAll('.view-order-details');
     viewOrderLinks.forEach(link => {
-        link.addEventListener('click'₹ function(e) {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
             const modal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
             modal.show();
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
             subtotalEl.textContent = '₹' + subtotal.toFixed(2);
             let shipping = 0;
             
-            // Shipping logic: if subtotal < 100 and > 0₹ shipping is 100₹ else free
+            // Shipping logic: if subtotal < 100 and > 0, shipping is 100, else free
             if (subtotal > 0 && subtotal < 100) {
                 shipping = 100;
                 shippingEl.textContent = '₹100.00';
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
         const minusBtn = input.previousElementSibling;
         const val = parseInt(input.value) || 0;
         if (val <= 1) {
-            minusBtn.setAttribute('disabled'₹ 'disabled');
+            minusBtn.setAttribute('disabled', 'disabled');
         } else {
             minusBtn.removeAttribute('disabled');
         }
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     document.querySelectorAll('.qty-input').forEach(input => {
         updateQtyButtons(input);
         
-        input.addEventListener('change'₹ function() {
+        input.addEventListener('change', function() {
             let val = parseInt(this.value) || 1;
             if (val < 1) val = 1;
             this.value = val;
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     });
 
     document.querySelectorAll('.qty-plus').forEach(btn => {
-        btn.addEventListener('click'₹ function() {
+        btn.addEventListener('click', function() {
             const input = this.previousElementSibling;
             let val = parseInt(input.value) || 0;
             input.value = val + 1;
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
             if (unitPriceMatch) {
                 const unitPrice = parseFloat(unitPriceMatch[1]);
                 const linePriceEl = tr.querySelector('.line-price');
-                // The structure has the trash icon inside₹ so we need to preserve it
+                // The structure has the trash icon inside, so we need to preserve it
                 const iconHTML = '<button class="btn btn-link text-danger p-0 ms-3 remove-item"><i class="fa-solid fa-trash"></i></button>';
                 linePriceEl.innerHTML = '₹' + (unitPrice * (val + 1)).toFixed(2) + iconHTML;
                 attachRemoveListener(linePriceEl.querySelector('.remove-item'));
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     });
 
     document.querySelectorAll('.qty-minus').forEach(btn => {
-        btn.addEventListener('click'₹ function() {
+        btn.addEventListener('click', function() {
             const input = this.nextElementSibling;
             let val = parseInt(input.value) || 0;
             if (val > 1) {
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     });
 
     const attachRemoveListener = (btn) => {
-        btn.addEventListener('click'₹ function(e) {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
             const tr = this.closest('tr');
             tr.remove();
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
     
     if (sortOptions.length > 0 && sortDropdownText) {
         sortOptions.forEach(option => {
-            option.addEventListener('click'₹ function(e) {
+            option.addEventListener('click', function(e) {
                 e.preventDefault();
                 // Update button text
                 sortDropdownText.textContent = this.getAttribute('data-value');
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
         if (prevLeft !== null) {
             magicLine.style.transition = 'none';
             magicLine.style.width = '20px';
-            magicLine.style.transform = `translateX(₹{prevLeft}px)`;
+            magicLine.style.transform = `translateX(${prevLeft}px)`;
         } else {
             magicLine.style.transition = 'none';
             magicLine.style.width = '0px';
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded'₹ () => {
 
         // 2. Wait for fonts to load to ensure destination calculation is perfect
         document.fonts.ready.then(() => {
-            const updateLine = (element₹ animate = true) => {
+            const updateLine = (element, animate = true) => {
                 if (!element) return;
                 const parentRect = navBar.getBoundingClientRect();
                 const linkRect = element.getBoundingClientRect();
@@ -304,11 +304,11 @@ document.addEventListener('DOMContentLoaded'₹ () => {
                 if (!animate) {
                     magicLine.style.transition = 'none';
                 } else {
-                    magicLine.style.transition = 'transform 0.4s cubic-bezier(0.25₹ 0.8₹ 0.25₹ 1)₹ width 0.4s cubic-bezier(0.25₹ 0.8₹ 0.25₹ 1)';
+                    magicLine.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)';
                 }
                 
-                magicLine.style.width = `₹{width}px`;
-                magicLine.style.transform = `translateX(₹{centerOffset}px)`;
+                magicLine.style.width = `${width}px`;
+                magicLine.style.transform = `translateX(${centerOffset}px)`;
                 
                 if (!animate) {
                     void magicLine.offsetWidth; // Force layout
@@ -319,24 +319,24 @@ document.addEventListener('DOMContentLoaded'₹ () => {
                 // We are already at the previous location. Now we just enable transition and slide!
                 requestAnimationFrame(() => {
                     requestAnimationFrame(() => {
-                        updateLine(activeLink₹ true);
+                        updateLine(activeLink, true);
                     });
                 });
                 sessionStorage.removeItem('magicLineFromLeft');
             } else if (activeLink) {
-                updateLine(activeLink₹ false);
+                updateLine(activeLink, false);
             }
 
             document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-                link.addEventListener('click'₹ function() {
+                link.addEventListener('click', function() {
                     const parentRect = navBar.getBoundingClientRect();
                     const lineRect = magicLine.getBoundingClientRect();
                     const left = lineRect.left - parentRect.left;
                     // Store current line position before navigating away
-                    sessionStorage.setItem('magicLineFromLeft'₹ left);
+                    sessionStorage.setItem('magicLineFromLeft', left);
                     
                     // CRITICAL: Do NOT animate here! Animating right before a page unload 
-                    // causes the animation to start₹ freeze₹ and then restart on the new page₹ 
+                    // causes the animation to start, freeze, and then restart on the new page, 
                     // which creates a severe "jerking" visual glitch. 
                 });
             });
