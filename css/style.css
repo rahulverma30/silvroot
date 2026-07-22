@@ -101,6 +101,14 @@ h6,
   justify-content: center;
 }
 
+/* --- New Logo Styles --- */
+.silvroot-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -20px;
+}
+
 .silvroot-leaf-icon {
   position: absolute;
   top: 0px;
@@ -127,16 +135,16 @@ h6,
   .navbar-nav {
     position: relative;
   }
-  
+
   .navbar-nav .nav-link {
     position: relative;
   }
-  
+
   .navbar-nav .nav-link.active {
     color: var(--primary-color) !important;
     font-weight: 700;
   }
-  
+
   .magic-line {
     position: absolute;
     bottom: 0px;
@@ -147,6 +155,10 @@ h6,
     z-index: 10;
     pointer-events: none;
     left: 0;
+  }
+
+  .silvroot-logo-img {
+    margin-left: unset;
   }
 }
 
@@ -1301,16 +1313,35 @@ input[type=number] {
   transform: none !important;
   border: 1px solid var(--border-color);
 }
-/* Accent Utility Classes */
-.text-accent { color: var(--accent-color) !important; }
-.bg-accent { background-color: var(--accent-color) !important; }
-.border-accent { border-color: var(--accent-color) !important; }
 
-/* --- New Logo Styles --- */
-.silvroot-logo-img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-    margin-left: -20px;
+/* Accent Utility Classes */
+.text-accent {
+  color: var(--accent-color) !important;
 }
 
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
+}
+
+
+
+
+
+/* --- Hide Carousel Controls on Mobile --- */
+@media (max-width: 767.98px) {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
