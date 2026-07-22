@@ -178,6 +178,7 @@ h6,
 
   .silvroot-logo-img {
     margin-left: unset;
+    height: 40px;
   }
 }
 
@@ -1384,4 +1385,16 @@ body {
   .hero-section+section {
     margin-top: -40px !important;
   }
+}
+
+/* --- CRITICAL BUG FIX: Mobile Hero Height --- */
+@media (max-width: 991px) {
+    .hero-section {
+        height: 45vh !important; 
+        min-height: 350px !important;
+        max-height: 400px !important;
+        padding: 2rem 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
 }
