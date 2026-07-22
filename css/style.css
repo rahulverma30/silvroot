@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
+  --accent-color: #C15C3D;
   --bg-color: #FDFBF7;
   --primary-color: #1B4D3E;
   --text-color: #333333;
@@ -1300,3 +1301,16 @@ input[type=number] {
   transform: none !important;
   border: 1px solid var(--border-color);
 }
+/* Accent Utility Classes */
+.text-accent { color: var(--accent-color) !important; }
+.bg-accent { background-color: var(--accent-color) !important; }
+.border-accent { border-color: var(--accent-color) !important; }
+
+/* --- New Logo Styles --- */
+.silvroot-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-left: -20px;
+}
+
