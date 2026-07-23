@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,71 +16,79 @@
 
     <!-- SEO & Open Graph Metadata -->
     <meta property="og:title" content="Silvroot - Ayurvedic Beauty & Wellness">
-    <meta property="og:description" content="Shop natural, organic, and Ayurvedic beauty and skincare products at Silvroot.">
+    <meta property="og:description"
+        content="Shop natural, organic, and Ayurvedic beauty and skincare products at Silvroot.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.silvroot.com/assets/hero.png">
     <meta property="og:url" content="https://www.silvroot.com/">
     <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-            <!-- Navbar -->
+    <!-- Navbar -->
     <header>
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
-        <div class="container d-flex align-items-center justify-content-between position-relative">
-            <!-- Left: Hamburger (Mobile Only) -->
-            <div class="d-flex justify-content-start d-lg-none" style="flex: 1;">
-                <button class="custom-toggler d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle mobile menu">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-3">
+            <div class="container d-flex align-items-center justify-content-between position-relative">
+                <!-- Left: Hamburger (Mobile Only) -->
+                <div class="d-flex justify-content-start d-lg-none" style="flex: 1;">
+                    <button class="custom-toggler d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu" aria-label="Toggle mobile menu">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </button>
-            </div>
-            
-            <!-- Logo (Center on mobile, Left on desktop) -->
-            <div class="d-flex justify-content-center justify-content-lg-start" style="flex: 1;">
-                <a class="navbar-brand-centered m-0" href="index.html">
+                </div>
+
+                <!-- Logo (Center on mobile, Left on desktop) -->
+                <div class="d-flex justify-content-center justify-content-lg-start" style="flex: 1;">
+                    <a class="navbar-brand-centered m-0" href="index.html">
                         <img src="assets/logo.jpg" alt="Silvroot Logo" class="silvroot-logo-img">
                     </a>
-            </div>
-            
-            <!-- Center: Desktop Links -->
-            <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="navbarNav" style="flex: 2;">
-                <ul class="navbar-nav mx-auto gap-4 justify-content-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link " href="shop.html">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Right: Icons -->
-            <div class="d-flex justify-content-end align-items-center gap-3" style="flex: 1;">
-                <a href="account.html" class="text-dark"><i class="fa-regular fa-user fs-5"></i></a>
-                    <a href="cart.html" class="text-dark position-relative">
-                        <i class="fa-solid fa-cart-shopping fs-5"></i>
-                        <span id="cart-counter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
-                    </a>
-            </div>
-            
-            <!-- Mobile Menu Offcanvas -->
-            <div class="offcanvas offcanvas-start bg-beige-custom d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-                <div class="offcanvas-header border-bottom border-light">
-                    <h5 class="offcanvas-title" id="mobileMenuLabel" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1B4D3E;">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-flex flex-column justify-content-center">
-                    <ul class="offcanvas-nav-list text-center w-100">
-                        <li><a class="mobile-offcanvas-link" href="index.html">Home</a></li>
-                        <li><a class="mobile-offcanvas-link" href="shop.html">Shop</a></li>
-                        <li><a class="mobile-offcanvas-link" href="about.html">About</a></li>
-                        <li><a class="mobile-offcanvas-link" href="contact.html">Contact</a></li>
+
+                <!-- Center: Desktop Links -->
+                <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="navbarNav"
+                    style="flex: 2;">
+                    <ul class="navbar-nav mx-auto gap-4 justify-content-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="shop.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+
+                <!-- Right: Icons -->
+                <div class="d-flex justify-content-end align-items-center gap-3" style="flex: 1;">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user fs-5"></i></a>
+                    <a href="cart.html" class="text-dark position-relative">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span id="cart-counter"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size: 0.6rem;">0</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Offcanvas -->
+                <div class="offcanvas offcanvas-start bg-beige-custom d-lg-none" tabindex="-1" id="mobileMenu"
+                    aria-labelledby="mobileMenuLabel">
+                    <div class="offcanvas-header border-bottom border-light">
+                        <h5 class="offcanvas-title" id="mobileMenuLabel"
+                            style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1B4D3E;">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column justify-content-center">
+                        <ul class="offcanvas-nav-list text-center w-100">
+                            <li><a class="mobile-offcanvas-link" href="index.html">Home</a></li>
+                            <li><a class="mobile-offcanvas-link" href="shop.html">Shop</a></li>
+                            <li><a class="mobile-offcanvas-link" href="about.html">About</a></li>
+                            <li><a class="mobile-offcanvas-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -88,7 +97,8 @@
         <div class="container d-flex align-items-center">
             <div class="hero-content">
                 <h1 class="hero-title">100% Pure, Raw &amp; Authentic Ayurveda.</h1>
-                <p class="lead mb-4">From potent roots like Ashwagandha to pure Desi Ghee and Multani Mitti. Experience nature in its most unadulterated form.</p>
+                <p class="lead mb-4">From potent roots like Ashwagandha to pure Desi Ghee and Multani Mitti. Experience
+                    nature in its most unadulterated form.</p>
                 <!-- <a href="shop.html" class="btn btn-primary-custom">Shop Now</a> -->
             </div>
         </div>
@@ -97,103 +107,121 @@
     <!-- Brand Benefits -->
     <section class="section-padding bg-white">
         <div class="container text-center">
-            
-<div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
-    <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="row g-4 mt-4">
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_vitality.png" class="card-img-top" alt="Dried roots and wooden bowls">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Vitality Roots</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+
+            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true"
+                data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <h2 class="text-center mb-5">Shop by Category</h2>
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 mt-4">
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_vitality.png" class="card-img-top"
+                                        alt="Dried roots and wooden bowls">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Vitality Roots</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_hair.png" class="card-img-top" alt="Herbal powders and amla">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Hair Nourishment</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_skin.png" class="card-img-top"
+                                        alt="Multani mitti clay and green neem leaves">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Skin &amp; Detox</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_pure.png" class="card-img-top"
+                                        alt="Golden honey and pure ghee">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Pure Essentials</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 mt-4">
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_skin.png" class="card-img-top"
+                                        alt="Multani mitti clay and green neem leaves">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Skin &amp; Detox</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_pure.png" class="card-img-top"
+                                        alt="Golden honey and pure ghee">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Pure Essentials</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_vitality.png" class="card-img-top"
+                                        alt="Dried roots and wooden bowls">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Vitality Roots</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card card-custom card-category h-100 border-0 position-relative">
+                                    <img src="assets/cat_hair.png" class="card-img-top" alt="Herbal powders and amla">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Hair Nourishment</h3>
+                                        <a href="shop.html"
+                                            class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_hair.png" class="card-img-top" alt="Herbal powders and amla">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Hair Nourishment</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_skin.png" class="card-img-top" alt="Multani mitti clay and green neem leaves">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Skin &amp; Detox</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_pure.png" class="card-img-top" alt="Golden honey and pure ghee">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Pure Essentials</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-            
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel"
+                    data-bs-slide="prev" style="left: -50px; justify-content: flex-start; opacity: 1;">
+                    <i class="fa-solid fa-chevron-left text-dark fs-3"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel"
+                    data-bs-slide="next" style="right: -50px; justify-content: flex-end; opacity: 1;">
+                    <i class="fa-solid fa-chevron-right text-dark fs-3"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="row g-4 mt-4">
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_skin.png" class="card-img-top" alt="Multani mitti clay and green neem leaves">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Skin &amp; Detox</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_pure.png" class="card-img-top" alt="Golden honey and pure ghee">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Pure Essentials</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_vitality.png" class="card-img-top" alt="Dried roots and wooden bowls">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Vitality Roots</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card card-custom card-category h-100 border-0 position-relative">
-                        <img src="assets/cat_hair.png" class="card-img-top" alt="Herbal powders and amla">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Hair Nourishment</h3>
-                            <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark pb-1 text-uppercase small fw-bold">Explore</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev" style="left: -50px; justify-content: flex-start; opacity: 1;">
-        <i class="fa-solid fa-chevron-left text-dark fs-3"></i>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next" style="right: -50px; justify-content: flex-end; opacity: 1;">
-        <i class="fa-solid fa-chevron-right text-dark fs-3"></i>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
         </div>
     </section>
 
@@ -202,8 +230,10 @@
         <div class="promo-banner-overlay"></div>
         <div class="container promo-banner-content">
             <h2 class="display-4 fw-bold mb-3">Silvroot Glow Collection</h2>
-            <p class="lead mb-4 max-w-50 mx-auto" style="max-width: 600px;">Unlock your inner radiance with our exclusive blend of saffron and turmeric facial oils.</p>
-            <a href="shop.html" class="btn btn-outline-light rounded-0 px-4 py-2 text-uppercase fw-bold border-2">Discover the Glow</a>
+            <p class="lead mb-4 max-w-50 mx-auto" style="max-width: 600px;">Unlock your inner radiance with our
+                exclusive blend of saffron and turmeric facial oils.</p>
+            <a href="shop.html"
+                class="btn btn-outline-light rounded-0 px-4 py-2 text-uppercase fw-bold border-2">Discover the Glow</a>
         </div>
     </section>
 
@@ -211,50 +241,67 @@
     <section class="section-padding bg-white">
         <div class="container position-relative">
             <h2 class="text-center mb-5">Featured Products</h2>
-            
-                        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="3000">
+
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true"
+                data-bs-interval="3000">
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <div class="row g-4">
                             <div class="col-md-3 col-6">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <div class="position-absolute top-0 start-0 m-2"><span class="badge bg-accent">Best Seller</span></div>
-                                    <a href="product.html"><img src="assets/ashwagandha.png" class="card-img-top" alt="Ashwagandha Root Powder"></a>
+                                    <div class="position-absolute top-0 start-0 m-2"><span class="badge bg-accent">Best
+                                            Seller</span></div>
+                                    <a href="product.html"><img src="assets/ashwagandha.png" class="card-img-top"
+                                            alt="Ashwagandha Root Powder"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Pure Ashwagandha Root Powder</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Pure Ashwagandha Root Powder</a>
+                                        </h5>
                                         <p class="card-price mb-3">₹350.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/wild_honey.png" class="card-img-top" alt="Wild Forest Honey"></a>
+                                    <a href="product.html"><img src="assets/wild_honey.png" class="card-img-top"
+                                            alt="Wild Forest Honey"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Wild Forest Shehed (Honey)</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Wild Forest Shehed (Honey)</a>
+                                        </h5>
                                         <p class="card-price mb-3">₹599.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6 d-none d-md-block">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/multani_mitti.png" class="card-img-top" alt="Organic Multani Mitti Clay"></a>
+                                    <a href="product.html"><img src="assets/multani_mitti.png" class="card-img-top"
+                                            alt="Organic Multani Mitti Clay"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Organic Multani Mitti Clay</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Organic Multani Mitti Clay</a>
+                                        </h5>
                                         <p class="card-price mb-3">₹199.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6 d-none d-md-block">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/desi_ghee.png" class="card-img-top" alt="Desi Ghee"></a>
+                                    <a href="product.html"><img src="assets/desi_ghee.png" class="card-img-top"
+                                            alt="Desi Ghee"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Pure Cultured Desi Ghee</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Pure Cultured Desi Ghee</a></h5>
                                         <p class="card-price mb-3">₹1250.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -265,41 +312,53 @@
                         <div class="row g-4">
                             <div class="col-md-3 col-6">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/shatawri.png" class="card-img-top" alt="Organic Shatawri Powder"></a>
+                                    <a href="product.html"><img src="assets/shatawri.png" class="card-img-top"
+                                            alt="Organic Shatawri Powder"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Organic Shatawri Powder</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Organic Shatawri Powder</a></h5>
                                         <p class="card-price mb-3">₹420.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/safaid_musli.png" class="card-img-top" alt="Raw Safaid Musli"></a>
+                                    <a href="product.html"><img src="assets/safaid_musli.png" class="card-img-top"
+                                            alt="Raw Safaid Musli"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Raw Safaid Musli</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Raw Safaid Musli</a></h5>
                                         <p class="card-price mb-3">₹899.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6 d-none d-md-block">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/amla.png" class="card-img-top" alt="Pure Amla Powder"></a>
+                                    <a href="product.html"><img src="assets/amla.png" class="card-img-top"
+                                            alt="Pure Amla Powder"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Pure Amla Powder</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Pure Amla Powder</a></h5>
                                         <p class="card-price mb-3">₹220.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6 d-none d-md-block">
                                 <div class="card card-custom h-100 border-0 text-center">
-                                    <a href="product.html"><img src="assets/moringa.png" class="card-img-top" alt="Moringa Leaf Powder"></a>
+                                    <a href="product.html"><img src="assets/moringa.png" class="card-img-top"
+                                            alt="Moringa Leaf Powder"></a>
                                     <div class="card-body px-0">
-                                        <h5 class="card-title"><a href="product.html" class="text-dark text-decoration-none">Moringa Leaf Powder</a></h5>
+                                        <h5 class="card-title"><a href="product.html"
+                                                class="text-dark text-decoration-none">Moringa Leaf Powder</a></h5>
                                         <p class="card-price mb-3">₹349.00</p>
-                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to Cart</button>
+                                        <button class="btn btn-outline-custom w-100 add-to-cart-btn">Add to
+                                            Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -307,10 +366,14 @@
                     </div>
                 </div>
                 <!-- Controls hidden per user request -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev" style="left: -50px; justify-content: flex-start; opacity: 1;"><i class="fa-solid fa-chevron-left text-dark fs-3"></i>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="prev" style="left: -50px; justify-content: flex-start; opacity: 1;"><i
+                        class="fa-solid fa-chevron-left text-dark fs-3"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next" style="right: -50px; justify-content: flex-end; opacity: 1;"><i class="fa-solid fa-chevron-right text-dark fs-3"></i>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel"
+                    data-bs-slide="next" style="right: -50px; justify-content: flex-end; opacity: 1;"><i
+                        class="fa-solid fa-chevron-right text-dark fs-3"></i>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
@@ -325,9 +388,12 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <div class="stars mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
                         </div>
-                        <p class="mb-4">"The Kumkumadi serum completely transformed my skin texture. It feels so grounded and organic, true to Ayurvedic roots."</p>
+                        <p class="mb-4">"The Kumkumadi serum completely transformed my skin texture. It feels so
+                            grounded and organic, true to Ayurvedic roots."</p>
                         <div class="d-flex align-items-center">
                             <div class="testimonial-avatar">A</div>
                             <div>
@@ -340,9 +406,12 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <div class="stars mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
                         </div>
-                        <p class="mb-4">"I love the clean ingredients. It's rare to find a brand that strictly adheres to pure herbs without any synthetic fillers."</p>
+                        <p class="mb-4">"I love the clean ingredients. It's rare to find a brand that strictly adheres
+                            to pure herbs without any synthetic fillers."</p>
                         <div class="d-flex align-items-center">
                             <div class="testimonial-avatar" style="background-color: #8C7A6B;">M</div>
                             <div>
@@ -355,9 +424,12 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <div class="stars mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i>
                         </div>
-                        <p class="mb-4">"The hair oil smells incredibly earthy and natural. It's become a staple in my Sunday self-care routine."</p>
+                        <p class="mb-4">"The hair oil smells incredibly earthy and natural. It's become a staple in my
+                            Sunday self-care routine."</p>
                         <div class="d-flex align-items-center">
                             <div class="testimonial-avatar" style="background-color: #C1B098;">S</div>
                             <div>
@@ -381,10 +453,13 @@
                 <div class="col-md-6">
                     <h2 class="mb-4">Our Journey</h2>
                     <p class="mb-4 text-muted">
-                        Rooted in the 5,000-year-old science of Ayurveda, Silvroot was born out of a desire to reconnect with nature's innate healing power. We source the finest botanicals, roots, and essential oils directly from ethical farmers who share our reverence for the earth.
+                        Rooted in the 5,000-year-old science of Ayurveda, Silvroot was born out of a desire to reconnect
+                        with nature's innate healing power. We source the finest botanicals, roots, and essential oils
+                        directly from ethical farmers who share our reverence for the earth.
                     </p>
                     <p class="mb-4 text-muted">
-                        Every formulation is a testament to purity, designed to balance your doshas and bring out your natural, radiant glow. We invite you to experience skincare as a sacred ritual.
+                        Every formulation is a testament to purity, designed to balance your doshas and bring out your
+                        natural, radiant glow. We invite you to experience skincare as a sacred ritual.
                     </p>
                     <a href="about.html" class="btn btn-outline-custom">Read Our Full Story</a>
                 </div>
@@ -392,7 +467,7 @@
         </div>
     </section>
 
-    
+
     <!-- The Purity Promise -->
     <section class="section-padding bg-beige-custom">
         <div class="container">
@@ -438,7 +513,7 @@
                     <p class="small fw-bold text-uppercase mb-0 mt-2">Lab Tested</p>
                 </div>
             </div>
-            
+
             <div class="row mb-4 text-start">
                 <div class="col-md-4 mb-4">
                     <a class="text-decoration-none mb-3 d-inline-flex" href="index.html">
@@ -446,21 +521,27 @@
                     </a>
                     <p class="text-muted small">Elevating skincare through the ancient wisdom of Ayurveda.</p>
                 </div>
-                                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4">
                     <h6 class="text-uppercase mb-3">Quick Links</h6>
                     <div class="d-flex flex-column gap-2">
                         <a href="shop.html" class="text-muted text-decoration-none link-animated-underline">Shop</a>
-                        <a href="about.html" class="text-muted text-decoration-none link-animated-underline">About Us</a>
-                        <a href="contact.html" class="text-muted text-decoration-none link-animated-underline">Contact</a>
+                        <a href="about.html" class="text-muted text-decoration-none link-animated-underline">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="text-muted text-decoration-none link-animated-underline">Contact</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h6 class="text-uppercase mb-3">Support</h6>
                     <div class="d-flex flex-column gap-2">
-                        <a href="shipping.html" class="text-muted text-decoration-none link-animated-underline">Shipping Policy</a>
-                        <a href="refund-policy.html" class="text-muted text-decoration-none link-animated-underline">Refund Policy</a>
-                        <a href="privacy-policy.html" class="text-muted text-decoration-none link-animated-underline">Privacy Policy</a>
-                        <a href="terms.html" class="text-muted text-decoration-none link-animated-underline">Terms of Service</a>
+                        <a href="shipping.html" class="text-muted text-decoration-none link-animated-underline">Shipping
+                            Policy</a>
+                        <a href="refund-policy.html"
+                            class="text-muted text-decoration-none link-animated-underline">Refund Policy</a>
+                        <a href="privacy-policy.html"
+                            class="text-muted text-decoration-none link-animated-underline">Privacy Policy</a>
+                        <a href="terms.html" class="text-muted text-decoration-none link-animated-underline">Terms of
+                            Service</a>
                     </div>
                 </div>
             </div>
@@ -472,8 +553,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
-
-
-
-
